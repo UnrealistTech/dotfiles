@@ -16,6 +16,9 @@ alias brew="/opt/homebrew/bin/brew"
 # Done brewing!
 # ##############################################
 
+eval "$(rbenv init -)"
+eval "$(nodenv init -)"
+
 # composer global binaries
 export PATH=$HOME/.composer/vendor/bin:$PATH
 
@@ -32,3 +35,7 @@ alias profile="nvim ~/.zshrc"
 alias home="cd ~"
 alias sprof="source ~/.zshrc"
 alias git=hub
+
+# BEGIN SNIPPET: Platform.sh CLI configuration
+export PATH="$HOME/"'.platformsh/bin':"$PATH"
+if [ -f "$HOME/"'.platformsh/shell-config.rc' ]; then . "$HOME/"'.platformsh/shell-config.rc'; fi # END SNIPPET
