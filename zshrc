@@ -1,5 +1,5 @@
 # user bin scripts
-export PATH=$HOME/bin:$PATH
+export PATH=./vendor/bin:$HOME/bin:$PATH
 
 # What OS are we running?
 if [[ `uname` == "Darwin" ]]; then
@@ -7,25 +7,15 @@ if [[ `uname` == "Darwin" ]]; then
 else
     source $HOME/.linux.zsh
 fi
+eval "$(starship init zsh)"
+eval "$(rbenv init -)"
+eval "$(nodenv init -)"
 
-if ! command -v rbenv &> /dev/null
-then
-  eval "$(rbenv init -)"
-fi
-if ! command -v nodenv &> /dev/null
-then
-  eval "$(nodenv init -)"
-fi
-
-
-export ZSH="$HOME/.oh-my-zsh"
-
-ZSH_THEME="lambda"
-DISABLE_UNTRACKED_FILES_DIRTY="true"
-plugins=(git)
-source $ZSH/oh-my-zsh.sh
-export editor="nvim"
+export EDITOR="nvim"
 
 # Aliases
 alias profile="nvim ~/.zshrc"
 alias sprof="source ~/.zshrc"
+
+# Lando
+export PATH="/Users/dustinleblanc/.lando/bin${PATH+:$PATH}"; #landopath

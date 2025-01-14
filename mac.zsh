@@ -15,3 +15,4 @@ fi
 
 # composer global binaries
 export PATH=$HOME/.composer/vendor/bin:$PATH
+alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
