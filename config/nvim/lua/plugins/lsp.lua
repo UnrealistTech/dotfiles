@@ -7,9 +7,7 @@ return {
         intelephense = {
           settings = {
             intelephense = {
-              format = {
-                braces = "k&r",
-              },
+              format = {},
             },
           },
         },
