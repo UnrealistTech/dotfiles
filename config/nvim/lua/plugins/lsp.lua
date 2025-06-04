@@ -5,6 +5,7 @@ return {
     opts = {
       servers = {
         intelephense = {
+        phpactor = {
           settings = {
             intelephense = {
               format = {},
