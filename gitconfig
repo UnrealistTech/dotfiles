@@ -2,6 +2,7 @@
   templatedir = ~/.git_template
 [push]
   default = current
+	autoSetupRemote = true
 [color]
   ui = auto
 [alias]
@@ -36,3 +37,5 @@
 	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
 [user]
 	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGxvK461aKkJMqiuBx3uFmtV4r1GiYIXgioFfoz6nxux
+[branch]
+	autoSetupMerge = simple
